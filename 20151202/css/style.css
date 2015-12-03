@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/** m */
+/* line 4, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ html, body { border: 0; font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif; line-height: 1; margin: 0; padding: 0; }
+
+/* line 14, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ div, span, object, iframe, img, table, caption, thead, tbody, tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu, nav, footer, header, section, summary, mark, audio, video { border: 0; margin: 0; padding: 0; }
+
+/* line 22, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code, del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label { border: 0; font-size: 100%; vertical-align: baseline; margin: 0; padding: 0; }
+
+/* line 31, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ article, aside, canvas, figure, figure img, figcaption, hgroup, footer, header, nav, section, audio, video { display: block; }
+
+/* line 35, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ table { border-collapse: separate; border-spacing: 0; }
+
+/* line 38, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ table caption, table th, table td { text-align: left; vertical-align: middle; }
+
+/* line 43, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ li { list-style: none; }
+
+/* line 46, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ a { text-decoration: none; }
+
+/* line 49, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ a img { border: 0; }
+
+/* line 53, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ :focus { outline: 0; }
+
+/* 全局兼容 */
+/* line 58, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+
+/* line 59, C:/Users/Administrator/Desktop/20151202/css/_reset.scss */ .clearfix { zoom: 1; }
+
+/* line 3, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .wrapper { text-align: center; }
+
+/* line 4, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .dn { display: none; }
+
+/* line 7, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .gh-img { padding: 30px; }
+
+/* line 8, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .gh-img img { width: 100%; height: auto; }
+
+/* line 10, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .gh-download { margin: 10px auto; }
+
+/* line 12, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .gh-download a { font-size: 20px; line-height: 1; padding: 18px 0; width: 192px; display: block; background-color: #ff5a5f; color: #fff; border-radius: 6px; margin: 0 auto; }
+
+/* line 24, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .ghd-invitation { border-bottom: 2px solid #ff5a5f; width: 192px; margin: -30px auto 13px; padding-bottom: 4px; }
+
+/* line 29, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .ghd-invitation label { width: 30%; color: #ff5a5f; vertical-align: middle; display: inline-block; }
+
+/* line 36, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .ghd-invitation input { width: 60%; vertical-align: middle; border: none; }
+
+/* line 43, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .gm-img3 { padding: 15px; }
+
+/* line 45, C:/Users/Administrator/Desktop/20151202/css/style.scss */ .gm-img3 img { width: 100%; height: auto; }
+
+/*# sourceMappingURL=style.css.map */

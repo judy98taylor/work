@@ -1,0 +1,50 @@
+@import "reset";
+$red:#ff5a5f;
+%tc{text-align: center}
+.dn{display: none;}
+.wrapper{@extend %tc;}
+.g-header{}
+.gh-img{padding: 30px;
+    img{width: 100%;height: auto;}
+}
+.gh-download{
+    margin: 10px auto;
+    a{
+        font-size: 20px;
+        line-height: 1;
+        padding: 18px 0;
+        width: 192px;
+        display: block;
+        background-color: $red;
+        color: #fff;
+        border-radius: 6px;
+        margin: 0 auto;
+        }
+    }
+.ghd-invitation{
+    border-bottom: 2px solid $red;
+    width: 192px;
+    margin: -30px auto 13px;
+    padding-bottom: 4px;
+    label{
+        width: 30%;
+        @extend %fl;
+        color: $red;
+        vertical-align:middle;
+        display:inline-block;
+    }
+    input{
+        width: 60%;
+        vertical-align:middle;
+        border: none;
+        
+    }
+}
+.gm-img3{
+    padding: 15px;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
