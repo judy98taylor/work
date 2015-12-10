@@ -139,6 +139,7 @@ a img {
     display: -webkit-flex;
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
     align-items: center; }
     .m-flex .mf-double2 li {
       background-color: #8fb2b2;
