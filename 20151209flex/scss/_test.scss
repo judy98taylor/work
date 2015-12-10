@@ -1,0 +1,183 @@
+
+@mixin flex-container() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.m-flex{
+	background-color: #e8e8e8;
+	//note 单行 宽度自适应
+	.mf-single1{
+		height: 100px;
+		background-color: #e09696;
+		@include flex-container();
+		//排列方向 换行方式
+		flex-flow:row nowrap;
+		//主轴 对齐方式
+		justify-content:space-around;
+		//侧轴 对齐方式
+		align-items: center;
+		//多行垂直对齐
+		//align-content:stretch;
+		li{
+			background-color: #8fb2b2;
+			//放大 缩小 预设宽度
+			flex: 1 1 10px;
+			//排序
+			//order: 0;
+			//自身对齐方式
+			//align-items: stretch;
+			//width: 25%;
+			//height: 25vw;
+			//padding-top: 25%;
+			box-sizing: border-box;
+			border: 1px solid red;
+			a{
+				display: block;
+				text-align: center;
+				//height: 100px;
+			}
+			&:first-child{
+				align-self: flex-start;
+			}
+			&:last-child{
+				align-self: flex-end;
+			}
+			&:nth-child(3){
+				align-self: stretch;
+			}
+		}
+	}
+	//note 单行 固定宽度50px 总宽度要小于父级容器 
+	.mf-single2{
+		height: 100px;
+		background-color: #c64949;
+		@include flex-container();
+		//排列方向 换行方式
+		flex-flow:row nowrap;
+		//主轴 对齐方式(x)
+		//justify-content:flex-start;//左对齐
+		//justify-content:flex-end;//右对齐
+		//justify-content:center;//居中对齐
+		justify-content:space-between;//分散对齐
+		//justify-content:space-around;//等距分散
+		//侧轴 对齐方式(y)
+		align-items: center;
+		//多行垂直对齐
+		//align-content:stretch;
+		li{
+			background-color: #8fb2b2;
+			//放大 缩小 预设宽度
+			flex: 0 0 50px;
+			//排序
+			//order: 0;
+			//自身对齐方式
+			//align-items: stretch;
+			//width: 25%;
+			//height: 25vw;
+			//padding-top: 25%;
+			box-sizing: border-box;
+			border: 1px solid red;
+			a{
+				display: block;
+				text-align: center;
+				//height: 100px;
+			}
+			&:first-child{
+				align-self: flex-start;
+			}
+			&:last-child{
+				align-self: flex-end;
+			}
+			&:nth-child(3){
+				align-self: stretch;
+			}
+		
+		}
+	}
+	//至少2行 宽度自适应 
+	.mf-double1{
+		height: 100px;
+		background-color: #7e1616;
+		@include flex-container();
+		//排列方向 换行方式
+		flex-flow:row wrap;
+		//主轴 对齐方式(x)
+		//justify-content:flex-start;//左对齐
+		//justify-content:flex-end;//右对齐
+		//justify-content:center;//居中对齐
+		//justify-content:space-between;//分散对齐
+		//justify-content:space-around;//等距分散
+		//侧轴 对齐方式(y)
+		//
+		align-items: flex-start;
+		//align-items: stretch;
+		//align-items: stretch;
+		//align-items: stretch;
+		//多行垂直对齐
+		//align-content:stretch;
+		li{
+			background-color: #8fb2b2;
+			//放大 缩小 预设宽度
+			flex: 0 0 25%;
+			//排序
+			//order: 0;
+			//自身对齐方式
+			//align-items: stretch;
+			//width: 25%;
+			//height: 25vw;
+			//padding-top: 25%;
+			box-sizing: border-box;
+			border: 1px solid red;
+			a{
+				display: block;
+				text-align: center;
+				//height: 100px;
+			}
+			
+		}
+	}
+	//
+	.mf-double2{
+		height: 100px;
+		background-color: #381212;
+		@include flex-container();
+		//排列方向 换行方式
+		flex-flow:row wrap;
+		//主轴 对齐方式(x)
+		//justify-content:flex-start;//左对齐
+		//justify-content:flex-end;//右对齐
+		//justify-content:center;//居中对齐
+		//justify-content:space-between;//分散对齐
+		//justify-content:space-around;//等距分散
+		//侧轴 对齐方式(y)
+		align-items: center;
+		//多行垂直对齐
+		//align-content:stretch;
+		li{
+			background-color: #8fb2b2;
+			//放大 缩小 预设宽度
+			flex: 0 0 50px;
+			//排序
+			//order: 0;
+			//自身对齐方式
+			//align-items: stretch;
+			//width: 25%;
+			//height: 25vw;
+			//padding-top: 25%;
+			box-sizing: border-box;
+			border: 1px solid red;
+			a{
+				display: block;
+				text-align: center;
+				//height: 100px;
+			}
+			
+		}
+	}
+	
+	
+	
+}
