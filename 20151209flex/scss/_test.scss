@@ -6,8 +6,28 @@
   display: -webkit-flex;
   display: flex;
 }
+@mixin mf-eg($flex-flow:row wrap,$justify-content:flex-start,$align-items:flex-start,$basis:25%){
+		background-color: #381212;
+		box-sizing: border-box;
+		border: 1px solid aqua;
+		margin-bottom: 20px;
+		@include flex-container();
+		flex-flow:$flex-flow;
+		justify-content:$justify-content;
+		align-items:$align-items;
+		li{
+			background-color: #8fb2b2;
+			flex: 0 0 $basis;
+			box-sizing: border-box;
+			border: 1px solid red;
+			a{
+				display: block;
+				text-align: center;
+			}
+			
+		}
+	}
 .m-flex{
-	background-color: #e8e8e8;
 	//note 单行 宽度自适应
 	.mf-single1{
 		height: 100px;
@@ -97,9 +117,8 @@
 		
 		}
 	}
-	//至少2行 宽度自适应 
+	//至少2行 宽度自适应 父级容器不设高
 	.mf-double1{
-		height: 100px;
 		background-color: #7e1616;
 		@include flex-container();
 		//排列方向 换行方式
@@ -139,44 +158,20 @@
 			
 		}
 	}
+	p{margin: 20px 0;}
 	//
-	.mf-double2{
-		height: 100px;
-		background-color: #381212;
-		@include flex-container();
-		//排列方向 换行方式
-		flex-flow:row wrap;
-		//主轴 对齐方式(x)
-		//justify-content:flex-start;//左对齐
-		//justify-content:flex-end;//右对齐
-		//justify-content:center;//居中对齐
-		//justify-content:space-between;//分散对齐
-		justify-content:space-around;//等距分散
-		//侧轴 对齐方式(y)
-		align-items: center;
-		//多行垂直对齐
-		//align-content:stretch;
-		li{
-			background-color: #8fb2b2;
-			//放大 缩小 预设宽度
-			flex: 0 0 50px;
-			//排序
-			//order: 0;
-			//自身对齐方式
-			//align-items: stretch;
-			//width: 25%;
-			//height: 25vw;
-			//padding-top: 25%;
-			box-sizing: border-box;
-			border: 1px solid red;
-			a{
-				display: block;
-				text-align: center;
-				//height: 100px;
-			}
-			
-		}
+
+	.mf-eg1{
+		@include mf-eg();
 	}
+	.mf-eg2{
+		@include mf-eg(row nowrap,space-between,center,10%);
+	}
+	.mf-eg3{
+		@include mf-eg(row nowrap,space-around,center,10%);
+	}
+	
+	
 	
 	
 	
