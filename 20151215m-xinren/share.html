@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<title>异乡好居 新人专享</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<!--代码开始-->
+	<article class="g-container">
+		<header class="m-logo"></header>
+		<section class="m-share">
+			<section class="ms-box5">
+				<h1>异乡好居</h1>
+				<h2>送您1000元代金卷</h2>
+				<section class="msb5-box3">
+					<input type="text" placeholder="请输入手机号" maxlength="11">
+					<a class="receive" href="#">领取代金券</a>
+					<a class="download" href="#">下载异乡好居app</a>
+				</section>
+			</section>
+		</section>
+		<footer class="m-info">
+			<h2><span></span>活动说明</h2>
+			<section>
+				<p>1.您每推荐一位新朋友注册并下载APP后，您即获得200元通用代金券。 </p>
+				<p>2.被推荐的新朋友登陆APP即获1000元代金券（200元机票券＋200元租房券＋200元Homestay券＋200元私人定制券＋200元留学公寓券）。 </p>
+				<p>3.异乡好居对该活动保留最终解释权。</p>
+			</section>
+		</footer>
+	</article>
+	<script>
+		$('.m-info section').hide();
+		$('.m-info h2').click(function(){
+			if (!$(this).hasClass('on')){
+				$('.m-info h2').addClass('on')
+				$('.msb5-box3').hide();
+				$('.m-info section').show();
+				$('.m-info').css('margin-top','-50vw');
+				$('.m-info span').css("-webkit-transform", "rotate(180deg)");
+			}else{
+				$('.m-info h2').removeClass('on')
+				$('.msb5-box3').show();
+				$('.m-info section').hide();
+				$('.m-info').css('margin-top','0');
+				$('.m-info span').css("-webkit-transform", "rotate(180deg)");
+			}
+			
+		});
+			
+	
+	</script>
+<!--代码结束-->
+<!--js	
+	<script type="text/javascript" src="js/pageResponse.min.js"></script>
+	<script type="text/javascript">
+	
+		window.onload = window.onresize = function(){
+		pageResponse({
+			selectors : '#page',     //模块选择器，使用querySelectorAll的方法
+			mode : 'auto',     // auto || contain || cover ，默认模式为auto 
+			width : '320',      //输入页面的宽度，只支持输入数值，默认宽度为320px
+			height : '504'      //输入页面的高度，只支持输入数值，默认高度为504px
+		})
+	}
+
+	</script>
+-->	
+</body>
+</html>

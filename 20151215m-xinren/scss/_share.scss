@@ -1,0 +1,117 @@
+.g-container{
+	position: relative;
+	.m-logo{
+		background: url('../images/0.png') no-repeat center center;
+		background-size: cover;
+		width: 45px;
+		height: 45px;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	}
+	.m-share{
+		background: url('../images/1.png') no-repeat 80px 60px #FF5A5F;
+		background-size:75%;
+		width: 100%;
+		padding-top: 138%;
+		.ms-box5{
+			position: absolute;
+			left: 5vw;
+			top: 55vw;
+			font-family: "Microsoft YaHei";
+			h1{
+				font-size: 36px;
+				color: #fff;
+				line-height: 50px;
+				font-weight: normal;
+			}
+			h2{
+				font-size: 20px;
+				line-height: 28px;
+				color: #fff;
+				font-weight: normal;	
+			}
+			input{
+				width: 165px;
+				height: 40px;
+				border-radius: 4px;
+				color: #fff;
+				text-align: center;
+				background-color: #ff5a5f;
+				border: 1px solid #fff;
+				display: block;
+				margin: 30px 0 10px;
+				font-size: 15px;
+				&::-webkit-input-placeholder {
+					/* WebKit browsers */ 
+				color: #fff; 
+				} 
+				
+			}
+			.receive{
+				background-color: #fff;
+				color: #ff5a5f;
+				font-size: 16px;
+				line-height: 40px;
+				width: 165px;
+				border-radius: 4px;
+				display: block;
+				font-weight: bold;
+				text-align: center;
+				border: 1px solid #ff5a5f;
+				&:visited{
+					color: #ff5a5f;
+				}
+			}
+			.download{
+				color: #fff;
+				text-decoration: underline;
+				display: block;
+				text-align: center;
+				margin-top: 10vw;
+				&:visited{
+					color: #fff;
+				}
+			}
+			
+			
+		}
+		
+	}
+	.m-info{
+		h2{
+			font-size: 18px;
+			line-height: 1;
+			box-sizing: border-box;
+			font-weight: normal;
+			text-align: center;
+			background-color: #fff;
+			color: #A0A0A0;
+			padding-bottom: 10px;
+			span{
+				background: url('../images/2.png') no-repeat center 10px #fff;
+				background-size: 22px 12px;
+				display: block;
+				width: 22px;
+				height: 12px;
+				margin: 0 auto;
+				padding: 10px 0;
+
+			}
+			
+		}
+		section{
+			background-color: #F0F0F0;
+			padding: 20px 18px 32px;
+			p{
+				color: #454545;
+				font-size: 15px;
+				line-height: 22px;
+			}
+		}
+	}
+}
+.dn{display: none;}
+
+
+/***/
