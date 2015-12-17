@@ -9,7 +9,7 @@
 	</style>
 </head>
 <body>
-	<form id="form" method="post" name="tel-form" action="">
+	<form id="form" method="post" onsubmit = "submitFn();return false;">
 		<input type="tel" placeholder="telphone number,please" maxlength="11" id="tel">
 		<input type="submit" value="submit" id="submit" onclick="submitTel();" >
 	</form>
@@ -21,54 +21,50 @@
 		<p>4.后台返回数据，分类讨论</p>
 	</section>
 	<script>
-		//定义获取输入框内的文本存储在Otel
-		var Otel = $('#tel').val();
-		//定义用来保存待发送数据的对象Otelr
-		var Otelr = {};
-		
-		
-		//验证是否为手机号码 条件：第一位数字为1，第二位数字为35678 
-		
-		//a.利用正则表达式判断 定义正则判断方法
-		//function sjzzpd (canshu){
-			//各种代码balabala
-		//}
-		
-		//b.个人想法 把
-		
-		//用正则判断手机号码
-		function sjzzpd ('Otel'){
-			//如果不是手机号
-			if (){
-				//则弹出提示（请重新输入）
-				alert('请重新输入');
-				//然后跳出,意思是位于return后面的语句不会被执行
-				return;
-			//如果是手机号码	
-			}else{
-				//则保存在某某对象（Otels）里
+		//点击按钮后 执行ubmitFn();
+		function submitFn(){
+//先验证 后提交			
+			//定义获取输入框内的文本存储在Otel
+			var Otel = $('#tel').val();
+			//定义用来保存待发送数据的对象Otelr
+			var Otelr = {};
+
+
+			//验证是否为手机号码 条件：第一位数字为1，第二位数字为35678 
+
+			//a.利用正则表达式判断 定义正则判断方法
+			//function sjzzpd (canshu){
+				//各种代码balabala
+			//}
+
+			//b.个人想法 把
+
+			//用正则判断手机号码
+			function sjzzpd ('Otel'){
+				//如果不是手机号
+				if (){
+					//则弹出提示（请重新输入）
+					alert('请重新输入');
+					//然后跳出,意思是位于return后面的语句不会被执行
+					return;
+				//如果是手机号码	
+				}else{
+					//则保存在某某对象（Otels）里
+				}
 			}
+
+			//提交表单
+			function submitTel ('Otelr'){
+				//使用jq的ajax传送数据 与后台约定使用post方式
+				//$.post(url,[data],[fn],[type])
+				$.post('/asd0.php','Otelr',function(){
+					//发送成功后执行以下
+					//
+				},JSON);
+			//
+		}	
 		}
 		
-		//提交表单
-		function submitTel ('Otelr'){
-			//使用jq的ajax传送数据 与后台约定使用post方式
-			//$.post(url,[data],[fn],[type])
-			$.post('/asd0.php','Otelr',function(){
-				//发送成功后执行以下
-				//
-			},JSON);
-		//
-		}
-		
-		
-		//
-		//
-		//
-		//
-		//
-		//
-		//
 	</script>
 </body>
 </html>

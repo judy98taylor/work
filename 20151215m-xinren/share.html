@@ -7,7 +7,7 @@
 	<meta content="black" name="apple-mobile-web-app-status-bar-style">
 	<meta content="telephone=no" name="format-detection">
 	<meta content="email=no" name="format-detection">
-	<title>异乡好居 新人专享</title>
+	<title>异乡好居 邀请有利</title>
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-2.1.4.min.js"></script>
 </head>
@@ -19,11 +19,76 @@
 			<section class="ms-box5">
 				<h1>异乡好居</h1>
 				<h2>送您1000元代金卷</h2>
-				<section class="msb5-box3">
-					<input type="text" placeholder="请输入手机号" maxlength="11">
-					<a class="receive" href="#">领取代金券</a>
+				<form class="msb5-box3" id="form"  name= "myform" method = 'post'  action = '' onsubmit = "submitFn();return false;">
+				
+					<input type="tel" placeholder="请输入手机号" maxlength="11" class="shuru" id="ipt_phone" required >
+					<input type="submit" value="领取代金券" id="submit">
 					<a class="download" href="#">下载异乡好居app</a>
-				</section>
+				</form>
+				
+<script>
+//获参方法
+function getParam(name){
+	//RegExp 对象表示正则表达式，它是对字符串执行模式匹配的强大工具。
+	//创建对象 new RegExp(pattern, attributes);
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+	//从浏览器地址栏获取
+	var r = window.location.search.substr(1).match(reg);
+	//如果r不等于空
+	if (r != null) {
+		
+		return decodeURIComponent(r[2])
+	}
+	
+	return null;
+}
+//验证方法
+function checkFn(phone){
+	//第一位是1，第二位0-9，后面有10位数字
+	var MOBILERE = /1[0-9]{10}/;
+	if (MOBILERE.test(phone)) {
+			return true;
+		}else {
+			return false;
+		}
+}	
+//点击后执行					
+function submitFn(){
+	//分类获得
+	// aaa.php?sdfklsdjkf=11&invitephone=12345
+	var invitephone = getParam('invitephone');
+	// ipt_phone是 取到的input的值 即手机号
+	var ipt_phone = $('#ipt_phone').val();
+	//验证号码
+    if(!checkFn(ipt_phone)){
+        alert('请输入正确格式的手机号');
+		return false;
+    }
+	//分类存储
+    var params = {};
+    params.invitephone = invitephone;
+    params.phone = ipt_phone;
+	//jq的ajax传输  a=1&b=2 zifuchuan
+    $.post("/index.php/market/Yqyl/submit",params,function(json){
+		//做判断 如果json.code==1【0为正确。1为错误。自定义】   
+    	if(json.code==1){
+			//弹json.message
+    		alert(json.message);return;
+    	}
+		//判断是否新人
+    	if(json.is_newbe==1){
+			//浏览器窗口跳转成功页面
+    		window.location.href= '/index.php/market/Yqyl/success';
+		//不是1情况	
+    	}else{
+			//浏览器窗口跳转 已注册号码页面
+    		window.location.href='/index.php/market/Yqyl/received';
+    	}
+	//返回内容格式
+    },'json');
+    return false;
+}
+</script>
 			</section>
 		</section>
 		<footer class="m-info">
