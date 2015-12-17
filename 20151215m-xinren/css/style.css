@@ -94,7 +94,7 @@ a img {
         line-height: 28px;
         color: #fff;
         font-weight: normal; }
-      .g-container .m-share .ms-box5 input {
+      .g-container .m-share .ms-box5 .shuru {
         width: 165px;
         height: 40px;
         border-radius: 4px;
@@ -105,10 +105,10 @@ a img {
         display: block;
         margin: 30px 0 10px;
         font-size: 15px; }
-        .g-container .m-share .ms-box5 input::-webkit-input-placeholder {
+        .g-container .m-share .ms-box5 .shuru::-webkit-input-placeholder {
           /* WebKit browsers */
           color: #fff; }
-      .g-container .m-share .ms-box5 .receive {
+      .g-container .m-share .ms-box5 #submit {
         background-color: #fff;
         color: #ff5a5f;
         font-size: 16px;
@@ -119,8 +119,7 @@ a img {
         font-weight: bold;
         text-align: center;
         border: 1px solid #ff5a5f; }
-        .g-container .m-share .ms-box5 .receive:visited {
-          color: #ff5a5f; }
+        
       .g-container .m-share .ms-box5 .download {
         color: #fff;
         text-decoration: underline;
