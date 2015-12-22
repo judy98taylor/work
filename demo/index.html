@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<title>demo</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/vue.js"></script>
+
+</head>
+<body>
+<!--代码开始-->
+<!--
+	<section class="demo0">
+		<h1>flex 左边固定 右边自适应</h1>
+		<p></p>
+		<form action="">
+			<ol>
+				<li>
+					<label for="">用户名</label>
+					<input type="text">
+				</li>
+				<li>
+					<label for="">手机号</label>
+					<select name="" id="" option="quhao" v-model="formData.quhao"></select>				
+					<input type="tel">
+				</li>
+			</ol>
+		</form>	
+	</section>
+-->
+	<section>
+		<div class="demo1">
+			<h1>hello world</h1>
+			{{message}}
+		</div>
+		<script>
+			new Vue({
+				el: '.demo1',
+				data: {
+					message: 'hello vue.js!!!'
+				}
+			})
+		</script>
+		<div class="demo2">
+			<h1>双向绑定</h1>
+			<p>{{message}}</p>
+			<input type="text" v-model="message">
+		</div>
+		<script>
+			new Vue({
+				el: ".demo2",
+				data:{
+					message: 'hello vue.js~'
+				}
+			})
+		</script>
+		<div class="demo3">
+			<h1>渲染列表</h1>
+			<ul>
+				<li v-for="todo in todos">
+					{{todo.text}}
+				</li>
+			</ul>
+		</div>
+		<script>
+			new Vue({
+				el: '.demo3',
+				data:{
+					todos: [
+						{text: 'learn js'},
+						{text: 'learn vue.js'},
+						{text: 'build sth. awesome'}
+					]
+				}
+			})
+		</script>
+		<div class="demo4">
+			<h1>处理用户输入</h1>
+			<p>{{message}}</p>
+			<button v-on:click="reverseMessage">reverseMessage</button>
+		</div>
+		<script>
+			new Vue({
+				el: '.demo4',
+				data:{
+					message:'hello vue.js!'
+				},
+				methods: {
+					reverseMessage: function(){
+						this.message=this.message.split('').reverse('').join('')
+					}
+				}
+			})
+		</script>
+		<div class="demo5">
+			<h1>综合</h1>
+			<input type="text" v-model="newTodo" v-on:keyup.enter="addTodo">
+			<ul>
+				<li v-for="todo in todos">
+					<span>{{message}}</span>
+					<span v-on:click="removeTodo($index)">X</span>
+				</li>
+			</ul>
+		</div>
+		<script>
+			new Vue({
+				el: '.demo5',
+				data: {
+					newTodo: '',
+					todos: [
+						{text:'add some todos'}
+					]
+				},
+				methods: {
+					addTodo: function () {
+						//.trim() 删除字符串前后空格
+						var text = this.newTodo.trim()
+						//??   this是指？？？
+						if (text) {
+							//.push() 向数组中添加元素
+							this.todos.push({text:text});
+							this.newTodo = ''
+						}
+					},
+					removeTodo: function () {
+						//.splice() 向/从数组中添加/删除项目，然后返回被删除的项目
+						//arrayObject.splice(index,howmany,item1,.....,itemX[可选 向数组添加的新项目])
+						this.todos.splice(index,1)
+					}
+				}
+			})
+		</script>
+	</section>
+	
+<!--代码结束-->
+<!--js-->
+	<script type="text/javascript" src="js/pageResponse.min.js"></script>
+	<script type="text/javascript">
+		window.onload = window.onresize = function(){
+		pageResponse({
+			selectors : '#page',     //模块选择器，使用querySelectorAll的方法
+			mode : 'auto',     // auto || contain || cover ，默认模式为auto 
+			width : '320',      //输入页面的宽度，只支持输入数值，默认宽度为320px
+			height : '504'      //输入页面的高度，只支持输入数值，默认高度为504px
+		})
+	}
+	</script>
+</body>
+</html>

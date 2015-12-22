@@ -1,0 +1,27 @@
+.demo0{
+	h1{
+		color: red;
+	}
+	form{
+		
+	}
+}
+
+section{
+	border: 1px solid red;
+	margin: 20px;
+	padding: 10px;
+	background-color: #ddd;
+	div{
+		background-color: #fff;
+		border: 1px dashed blue;
+		margin-bottom: 10px;
+		&:last-child{
+			margin: 0;
+		}
+		h1{
+			color: aqua;
+			line-height: 2;
+		}
+	}
+}
