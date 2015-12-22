@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>demo</title>
+    <meta name="format-detection" content="telephone=no"/>  
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+    (function(init_width){
+        var isAndroid=navigator.userAgent.match(/(Android)/i)
+        , viewPort = document.querySelector("meta[name=viewport]");
+        window.html_font_size = isAndroid?100:window.innerWidth*100/init_width;
+        function setHtmlWidth(){
+            document.querySelector("html").style.fontSize = html_font_size + "px";
+        }
+        if (isAndroid) {
+            content = "target-densitydpi=320,width="+init_width+",user-scalable=no";
+            viewPort.setAttribute("content",content);
+        }else{
+            setHtmlWidth();window.onresize = setHtmlWidth;
+        }
+    })(640)
+    </script>
+
+</head>
+<body>
+	<header class="header-jr">
+		<img src="images/logo.png" alt="" class="logo">
+		<img src="images/bg.png" alt="" class="bg">
+	</header>
+	<section class="txt-jr clearfix">
+		<h2>代金券已领完</h2>
+	</section>
+	<form class="wrap">
+		<a href="#">下载异乡好居APP</a>
+	</form>
+
+</body>
+</html>

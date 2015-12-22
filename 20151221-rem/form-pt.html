@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>demo</title>
+    <meta name="format-detection" content="telephone=no"/>  
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+    (function(init_width){
+        var isAndroid=navigator.userAgent.match(/(Android)/i)
+        , viewPort = document.querySelector("meta[name=viewport]");
+        window.html_font_size = isAndroid?100:window.innerWidth*100/init_width;
+        function setHtmlWidth(){
+            document.querySelector("html").style.fontSize = html_font_size + "px";
+        }
+        if (isAndroid) {
+            content = "target-densitydpi=320,width="+init_width+",user-scalable=no";
+            viewPort.setAttribute("content",content);
+        }else{
+            setHtmlWidth();window.onresize = setHtmlWidth;
+        }
+    })(640)
+    </script>
+
+</head>
+<body>
+	<header class="header-jr pt">
+		<img src="images/10.jpg" alt="" class="bg">
+	</header>
+	
+	<form class="apply">
+		<ul>
+			<li>
+				<label for="">您的姓名</label>
+				<input type="text" name="name" placeholder="请填写真实姓名" required>
+			</li>
+			<li>
+				<label for="">手机号码</label>
+				<input type="tel" name="tel" placeholder="请输入手机号" required>
+			</li>
+			<li>
+				<label for="">联系邮箱</label>
+				<input type="email" name="email" placeholder="用于通知申请结果" required>
+			</li>
+			<li>
+				<label for="">您的职业</label>
+				<select name="" id=""  required>
+					<option value='0'>请选择您的职业</option>
+					<option value='1'>1</option>
+					<option value='2'>2</option>
+					<option value='3'>3</option>
+				</select>
+			</li>
+			<li>
+				<label for="">所在单位</label>
+				<input type="text" name="company" placeholder="选填">
+			</li>
+			<p>请输入正确的手机号</p>
+			<input type="submit" value="提交申请">
+			<span class="tips">活动说明</span>
+		</ul>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>demo</title>
+    <meta name="format-detection" content="telephone=no"/>  
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+    (function(init_width){
+        var isAndroid=navigator.userAgent.match(/(Android)/i)
+        , viewPort = document.querySelector("meta[name=viewport]");
+        window.html_font_size = isAndroid?100:window.innerWidth*100/init_width;
+        function setHtmlWidth(){
+            document.querySelector("html").style.fontSize = html_font_size + "px";
+        }
+        if (isAndroid) {
+            content = "target-densitydpi=320,width="+init_width+",user-scalable=no";
+            viewPort.setAttribute("content",content);
+        }else{
+            setHtmlWidth();window.onresize = setHtmlWidth;
+        }
+    })(640)
+    </script>
+
+</head>
+<body>
+	<header class="header-jr pt">
+		<img src="images/10.jpg" alt="" class="bg">
+	</header>
+	<section class="txt-jr pt clearfix">
+		<img src="images/bg.png" alt="" class="touxiang">
+		<div class="liuyan">
+			<small>Hi,我是<small>罗小白</small></small>
+			<h3>送你<span>200元</span>机票代金券</h3>
+		</div>
+	</section>
+	<form class="wrap">
+		<input type="text" placeholder="手机号/邮箱">
+		<p class="tip">请输入正确的手机号/邮箱</p>
+		<input type="submit" value="领取">
+		<span class="tips">使用流程</span>
+	</form>
+
+</body>
+</html>

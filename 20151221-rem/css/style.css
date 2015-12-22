@@ -1,0 +1,499 @@
+/**
+ * 移动端 全局重置
+ */
+html{font-size:100px}
+html, body {
+    border: 0;
+    font-family: "Microsoft Yahei","微软雅黑","Helvetica-Neue", "Helvetica", Arial, sans-serif;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+	font-size: .24rem;
+	color: #313131;
+}
+
+div, span, object, iframe, img, table, caption, thead, tbody,
+tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu,
+nav, footer, header, section, summary, mark, audio, video {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
+del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
+ol, ul, li, fieldset, legend, label {
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+    display: block;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    caption, th, td {
+        text-align: left;
+        vertical-align: middle;
+    }
+}
+li{
+    list-style: none;
+}
+/*
+a{
+    text-decoration: none;
+}
+*/
+a img {
+    border: 0;
+}
+input[type="button"], input[type="submit"], input[type="reset"] {
+-webkit-appearance: none;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+a:focus {
+    outline: 0;
+}
+.clear{
+  width:100%;
+  height:0;
+  clear:both;
+}
+.clear30{
+  height: 30px;
+}
+.clearfix {
+  zoom: 1;
+}
+img{width:100%;max-width: 100%;}
+/* 全局兼容 */
+.clearfix:after { content:"."; display:block; clear:both; visibility:hidden; line-height:0; height:0; }
+.clearfix { zoom:1; }
+
+/* todo index */
+.header-jr {
+	position: relative;
+	padding: .25rem;
+	text-align: center;
+}
+.wrap {
+	position: relative;
+	padding: .2rem .5rem 0;
+	text-align: center;
+}
+.header-jr .logo {
+	position: absolute;
+	top: .5rem;
+	left: .5rem;
+	width: 1rem;
+	height: 1.1rem;
+	display: block;
+}
+.bg {
+	padding-top: .1rem;
+	display: block;
+	width: 6.4rem;
+	height: auto;
+	
+}
+.txt-jr {
+	margin: .2rem;
+	position: relative;
+	text-align: center;
+}
+.txt-jr .touxiang {
+	width: 1.1rem;
+	height: 1.1rem;
+	margin: .2rem 0 .2rem .4rem;
+	border-radius: 50%;
+	display: block;
+	float: left;
+	border: 2px solid #d3d3d3;
+}
+.txt-jr .liuyan {
+	box-sizing: border-box;
+	padding: .2rem 0 .2rem .2rem;
+	height: 1.5rem;
+	width: 4rem;
+	display: block;
+	float: left;
+}
+.wrap input[type=text] {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-size: .4rem;
+	line-height: 2;
+	border-radius: 4px;
+	border: 1px solid #a0a0a0;
+}
+.wrap input[type=submit] {
+	display: block;
+	background-color: #ff5a5f;
+	width: 100%;
+	color: #fff;
+	font-size: .4rem;
+	line-height: 2;
+	border-radius: 4px;
+	border: none;
+}
+.tip {
+	color: #ff5a5f;
+	font-size: .35rem;
+	line-height: 1.4;
+}
+.tips {
+	background: url("../images/wenhao.png") no-repeat 0 center;
+	background-size: contain;
+	color: #a0a0a0;
+	font-size: .3rem;
+	line-height: .3rem;
+	display: inline-block;
+	text-indent: .4rem;
+	margin: .5rem 0 0;
+}
+/* todo rule */
+.rule {
+	text-align: center;
+}
+.h-jr {
+	padding: 20px 0;
+	border-bottom: .1rem solid #ff5a5f;
+	height: 50px;
+}
+.ring {
+	background: url("../images/11.png") no-repeat center center;
+	background-size: contain;
+	height: 108px;
+}
+.rule h1 {
+	font-weight: normal;
+	font-size: .4rem;
+	line-height: 3;
+	margin-top: 1rem;
+}
+.rule ol {
+	text-align: left;
+	padding: 0 .5rem;
+	font-size: .3rem;
+	line-height: 3;
+}
+
+.rule span {
+	display: inline-block;
+	font-size: .2rem;
+	line-height: .6rem;
+	width: .6rem;
+	text-align: center;
+	background-color: #ff5a5f;
+	color: #fff;
+	border-radius: 50%;
+	margin-right: .1rem;
+}
+.rule p{
+	font-size: .25rem;
+	text-align: center;
+	color: #a0a0a0;
+}
+
+/*todo success*/
+
+.txt-jr h1 {
+	font-weight: normal;
+	font-size: .4rem;
+	line-height: .6rem;
+	margin-bottom: .5rem;
+	background: url("../images/gou.png") no-repeat 0 0;
+	background-size: contain;
+	text-indent: 1rem;
+	text-align: center;
+	display: inline-block;
+}
+.txt-jr p {
+	color: #a0a0a0;
+	font-size: .3rem;
+	line-height: 1.5;
+}
+.txt-jr span {
+	color: #ff5a5f;
+}
+.wrap a {
+	background-color: #ff5a5f;
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: .4rem;
+	line-height: 3;
+	border-radius: 4px;
+	width: 80%;
+	margin: .2rem auto;
+}
+/*todo soldout*/
+.txt-jr h2 {
+	font-weight: normal;
+	font-size: .4rem;
+	line-height: .6rem;
+	background: url("../images/kulian.png") no-repeat 0 0;
+	background-size: contain;
+	text-indent: .8rem;
+	text-align: center;
+	display: inline-block;
+	margin-top: .5rem;
+}
+
+/*todo index-pt*/
+.pt .liuyan {
+	text-align: left;
+	padding-right: 0;
+} 
+.pt .liuyan small {
+	font-size: .3rem;
+	line-height: .5rem;
+} 
+.pt .liuyan h3 {
+	font-size: .35rem;
+	line-height: 1rem;
+	font-weight: normal;
+} 
+.header-jr.pt {
+	padding: 0;
+}
+/*success-pt*/
+.txt-jr.pt {
+	margin-top: 1rem;
+}
+/*rule-pt*/
+.rule.pt h1 {
+	margin: 0 .5rem .5rem;
+	border-bottom: 1px solid #a0a0a0;
+}
+/*info-pt*/
+.rule.info.pt li {
+	position: relative;
+	padding-left: .7rem;
+	padding-bottom: .3rem;
+	line-height: 2;
+}
+.rule.info.pt span {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/*form-pt*/
+.apply {
+	width: 6.4rem;
+	text-align: center;
+}
+.apply ul {
+	margin: .5rem .7rem;
+}
+.apply li {
+	width: 5rem;
+	border: 1px solid #a0a0a0;
+	font-size: .3rem;
+	line-height: 1;
+	margin: .2rem 0;
+	padding: .2rem 0;
+	box-sizing: border-box;
+}
+.apply label {
+	display: block;
+	width: 1.5rem;
+	float: left;
+	text-indent: .05rem;
+	font-size: .3rem;
+	line-height: 1;
+}
+.apply input {
+	display: block;
+	width: 3.2rem;
+	border: none;
+	font-size: .3rem;
+	line-height: 1;
+}
+.apply input::-webkit-input-placeholder {
+          /* WebKit browsers */
+	font-size: .3rem;
+	line-height: 1; 
+}
+.apply input[type=submit] {
+	display: block;
+	background-color: #ff5a5f;
+	width: 100%;
+	color: #fff;
+	font-size: .4rem;
+	line-height: 2;
+	border-radius: 4px;
+	border: none;
+}
+.apply .tips {
+	margin: .2rem auto;
+}
+.apply select {
+	display: block;
+	width: 3.2rem;
+	color: #a0a0a0;
+	border: none;
+}
+.apply option {
+	display: block;
+	width: 2rem;
+	color: #a0a0a0;
+	border: none;
+}
+.apply p {
+	color: #ff5a5f;
+	font-size: .24rem;
+	line-height: 2;
+	text-align: center;
+	margin-top: -0.2rem;
+}
+
+/*...*/
+.apply .xz {
+	display: inline-block;
+	width: 1rem;
+}
+.apply .tel {
+	display: inline-block;
+	width: 2.2rem;
+}
+.apply button {
+	display: block;
+    background-color: #ff5a5f;
+    width: 100%;
+    color: #fff;
+    font-size: .4rem;
+    line-height: 2;
+    border-radius: 4px;
+    border: none;
+}
+.header-jr.pt .bg{
+	padding-top: 0;
+}
+/** todo #moto apply **/
+#app #moto {
+    padding: 30px 30px 70px 30px;
+    font-size: 12px;
+    color: #313131;
+    font-weight: bold;
+}
+
+#app #moto p {
+    height: 35px;
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+    display: -webkit-box;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+#app #moto p span {
+    display: block;
+    width: 50px;
+    line-height: 35px;
+    margin-right: 10px;
+}
+
+#app #moto p input, #app #moto p select {
+    display: block;
+    height: 33px;
+    -webkit-box-flex: 1;
+    border: none;
+    outline: none;
+    background: #ffffff;
+}
+
+#app #moto p:nth-child(1) {
+    position: relative;
+}
+
+#app #moto p:nth-child(1) p.error {
+    position: absolute;
+    color: #ff5a5f;
+    top: -25px;
+    left: 0;
+}
+
+#app #moto button {
+    display: block;
+    height: 44px;
+    background: #ff5a5f;
+    color: #fff;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+}
+
+#app #moto .su-img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 30% auto 0;
+}
+
+#app #moto .su-text {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+#app #moto .error-message {
+    height: 21px;
+    line-height: 21px;
+    color: #ff5a5f;
+    border: none;
+	text-align: center;
+	display: inherit;
+}
+.flow {
+    padding: 50px 30px 0 30px;
+}
+.flow ul li {
+    font-size: 15px;
+    color: #313131;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.flow ul li:before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #ff5a5f;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bolder;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+}
+.flow ul li:nth-child(1):before {
+    content: "1";
+}
+.flow ul li:nth-child(2):before {
+    content: "2";
+}
+.flow ul li:nth-child(3):before {
+    content: "3";
+}
+.flow ul li:nth-child(4):before {
+    content: "4";
+} 
+#app #moto .tips {
+	color: #a0a0a0;
+	font-weight: normal;
+}

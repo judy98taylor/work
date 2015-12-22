@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>demo</title>
+    <meta name="format-detection" content="telephone=no"/>  
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+    (function(init_width){
+        var isAndroid=navigator.userAgent.match(/(Android)/i)
+        , viewPort = document.querySelector("meta[name=viewport]");
+        window.html_font_size = isAndroid?100:window.innerWidth*100/init_width;
+        function setHtmlWidth(){
+            document.querySelector("html").style.fontSize = html_font_size + "px";
+        }
+        if (isAndroid) {
+            content = "target-densitydpi=320,width="+init_width+",user-scalable=no";
+            viewPort.setAttribute("content",content);
+        }else{
+            setHtmlWidth();window.onresize = setHtmlWidth;
+        }
+    })(640)
+    </script>
+
+</head>
+<body>
+	<header class="h-jr">
+		<section class="ring"></section>
+	</header>
+	<article class="rule">
+		<h1>使用流程</h1>
+		<ol>
+			<li><span>1</span>输入手机号/邮箱，领取代金券</li>
+			<li><span>2</span>下载异乡好居APP，注册登录</li>
+			<li><span>3</span>进入国际机票模块，选购国际机票</li>
+			<li><span>4</span>支付时选定机票代金券，抵扣金额</li>
+			<p>代金券有效期：截至2016.12.31</p>
+		</ol>
+	</article>
+</body>
+</html>

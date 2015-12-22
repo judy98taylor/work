@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>demo</title>
+    <meta name="format-detection" content="telephone=no"/>  
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+    (function(init_width){
+        var isAndroid=navigator.userAgent.match(/(Android)/i)
+        , viewPort = document.querySelector("meta[name=viewport]");
+        window.html_font_size = isAndroid?100:window.innerWidth*100/init_width;
+        function setHtmlWidth(){
+            document.querySelector("html").style.fontSize = html_font_size + "px";
+        }
+        if (isAndroid) {
+            content = "target-densitydpi=320,width="+init_width+",user-scalable=no";
+            viewPort.setAttribute("content",content);
+        }else{
+            setHtmlWidth();window.onresize = setHtmlWidth;
+        }
+    })(640)
+    </script>
+
+</head>
+<body>
+	
+	<article class="rule info pt">
+		<h1>活动说明</h1>
+		<ol>
+			<li><span>1</span>填写信息申请成为机票推广人</li>
+			<li><span>2</span>使用【推广工具】，将优惠券分享给用户</li>
+			<li><span>3</span>用户领券后，下载异乡好居APP购买国际机票，直减200元</li>
+			<li><span>4</span>用户购票成功后，200元奖金发到推广人在异乡好居的余额中，可随时提现</li>
+		</ol>
+	</article>
+</body>
+</html>
