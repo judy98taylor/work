@@ -64,7 +64,8 @@ a img {
   position: relative;
   background-color: #F2E6D6;
   padding-top: 56px;
-  text-align: center; }
+  text-align: center;
+  max-width: 1000px; }
   .nzfl header h1 {
     font-size: 80px;
     color: #e23a3f; }
