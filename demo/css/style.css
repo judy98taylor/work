@@ -123,7 +123,7 @@ html {
       background: url("../images/piece.png") no-repeat;
       background-size: contain; }
   .nzfl footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     background: url("../images/footer.png") no-repeat;
