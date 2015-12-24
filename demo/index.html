@@ -27,40 +27,102 @@
 			<div class="piece"></div>
 		</section>
 		<footer></footer>
-		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="js/jQueryRotate.2.2.js"></script>
-		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-		<script type="text/javascript" src="js/pageResponse.min.js"></script>
-		<script type="text/javascript">
-			window.onload = window.onresize = function(){
-				pageResponse({
-					selectors : '.nzfl',     //模块选择器，使用querySelectorAll的方法
-					mode : 'auto',     // auto || contain || cover ，默认模式为auto 
-					width : '750',      //输入页面的宽度，只支持输入数值，默认宽度为320px
-					height : '1206'      //输入页面的高度，只支持输入数值，默认高度为504px
-				})
-			}
-		</script>
-		<script type="text/javascript">
-		$(function(){
-			$("#start").rotate({
-				bind:{
-					click:function(){
-						var a = Math.floor(Math.random() * 360);
-						 $(this).rotate({
-								duration:3000,
-								angle: 0, 
-								animateTo:1440+a,
-								easing: $.easing.easeOutSine,
-								callback: function(){
-									alert('中奖了I！');
-								}
-						 });
-					}
-				}
-			});
-		});
-		</script>
+		<section class="mask">
+			<div class="pop gxn200">
+				<h1>恭喜你!</h1>
+				<h2>获得<big>200</big>元机票代金券</h2>
+				<button class="mslq">马上领取</button>
+				<button class="zsyc">再试一次</button>
+				<p>可在异乡好居APP购买机票使用</p>
+				<i></i>
+			</div>
+<!--
+			<div class="pop gxn300">
+				<h1>恭喜你!</h1>
+				<h2>获得<big>300</big>元机票代金券</h2>
+				<button class="mslq">马上领取</button>
+				<button class="zsyc">再试一次</button>
+				<p>300可在异乡好居租房后购买机票使用</p>
+				<i></i>
+			</div>
+			<div class="pop gxn1000">
+				<h1>恭喜你!</h1>
+				<h2>获得<big>1000</big>元机票代金券</h2>
+				<button class="mslq">马上领取</button>
+				<button class="zsyc">再试一次</button>
+				<p>可在租房单笔订单满3000元后购买机票使用</p>
+				<i></i>
+			</div>
+-->
+<!--
+			<div class="pop sjh">
+				<form action="" name="form">
+					<input type="tel" placeholder="输入手机号">
+					<input type="text" placeholder="输入验证码">
+					<button class="send">发送验证码</button>
+					<button class="lq">领取</button>
+				</form>
+				<p>可在异乡好居APP购买机票使用</p>
+				<i></i>
+			</div>
+			<div class="pop lqcg">
+				<h1>领取成功</h1>
+				<p><span>200</span>元机票代金券已注入您的帐户，</p>
+				<p>快去下载APP使用吧~</p>
+				<a href="#" class="dl-btn">下载异乡好居APP</a>
+				<a href="#">查看使用方法</a>
+				<i></i>
+			</div>
+			<div class="pop xyha">
+				<h1>小遗憾啊~</h1>
+				<p>分享到朋友圈，可获得更多抽奖机会~</p>
+				<a href="#" class="yftx">有福同享</a>
+				<p>点击右上角，分享到朋友圈</p>
+				<i></i>
+			</div>
+			<div class="pop tbl">
+				<h1>太棒啦！</h1>
+				<p>获得再次抽奖机会</p>
+				<a href="#" class="zcyc">再抽一次</a>
+				<i></i>
+			</div>
+-->
+		</section>
 	</section>
+	
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/jQueryRotate.2.2.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/pageResponse.min.js"></script>
+	<script type="text/javascript">
+		window.onload = window.onresize = function(){
+			pageResponse({
+				selectors : '.nzfl',     //模块选择器，使用querySelectorAll的方法
+				mode : 'auto',     // auto || contain || cover ，默认模式为auto 
+				width : '750',      //输入页面的宽度，只支持输入数值，默认宽度为320px
+				height : '1206'      //输入页面的高度，只支持输入数值，默认高度为504px
+			})
+		}
+	</script>
+	<script type="text/javascript">
+	$(function(){
+		$("#start").rotate({
+			bind:{
+				click:function(){
+					var a = Math.floor(Math.random() * 360);
+					 $(this).rotate({
+							duration:3000,
+							angle: 0, 
+							animateTo:1440+a,
+							easing: $.easing.easeOutSine,
+							callback: function(){
+								alert('中奖了！');
+							}
+					 });
+				}
+			}
+		});
+	});
+	</script>
 </body>
 </html>

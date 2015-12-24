@@ -133,5 +133,28 @@ body {
     background-size: contain;
     width: 100%;
     height: 200px; }
+  .nzfl .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%; }
+    .nzfl .mask .pop {
+      width: 50%;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      padding-top: 200px;
+      box-sizing: border-box;
+      width: 659px;
+      height: 651px;
+      background: url("../images/pop-up.png") no-repeat; }
+      .nzfl .mask .pop i {
+        background: url("../images/close.png") no-repeat; }
 
 /*# sourceMappingURL=style.css.map */
