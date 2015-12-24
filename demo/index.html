@@ -12,53 +12,55 @@
 	<script type="text/javascript" src="js/vue.js"></script>
 
 </head>
-<body class="nzfl">
-	<header>
-		<h1>年终福利大放送！</h1>
-		<h2>留学房租<span>留学机票</span></h2>
-		<h3>您还有 <span> 3 </span> 次抽奖机会</h3>
-	</header>
-	<section class="main">
-		<div class="demo">
-        	<div id="disk"></div>
-        	<div id="start"><img src="images/start.png"></div>
-   		</div>
-   		<div class="piece"></div>
-	</section>
-	<footer></footer>
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/jQueryRotate.2.2.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="js/pageResponse.min.js"></script>
-	<script type="text/javascript">
-		window.onload = window.onresize = function(){
-			pageResponse({
-				selectors : '.nzfl',     //模块选择器，使用querySelectorAll的方法
-				mode : 'contain',     // auto || contain || cover ，默认模式为auto 
-				width : '750',      //输入页面的宽度，只支持输入数值，默认宽度为320px
-				height : '1254'      //输入页面的高度，只支持输入数值，默认高度为504px
-			})
-		}
-	</script>
-	<script type="text/javascript">
-	$(function(){
-		$("#start").rotate({
-			bind:{
-				click:function(){
-					var a = Math.floor(Math.random() * 360);
-					 $(this).rotate({
-							duration:3000,
-							angle: 0, 
-							animateTo:1440+a,
-							easing: $.easing.easeOutSine,
-							callback: function(){
-								alert('中奖了！');
-							}
-					 });
-				}
+<body>
+	<section class="nzfl">
+		<header>
+			<h1>年终福利大放送！</h1>
+			<h2>留学房租<span>留学机票</span></h2>
+			<h3>您还有 <span> 3 </span> 次抽奖机会</h3>
+		</header>
+		<section class="main">
+			<div class="demo">
+				<div id="disk"></div>
+				<div id="start"><img src="images/start.png"></div>
+			</div>
+			<div class="piece"></div>
+		</section>
+		<footer></footer>
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/jQueryRotate.2.2.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="js/pageResponse.min.js"></script>
+		<script type="text/javascript">
+			window.onload = window.onresize = function(){
+				pageResponse({
+					selectors : '.nzfl',     //模块选择器，使用querySelectorAll的方法
+					mode : 'auto',     // auto || contain || cover ，默认模式为auto 
+					width : '750',      //输入页面的宽度，只支持输入数值，默认宽度为320px
+					height : '1206'      //输入页面的高度，只支持输入数值，默认高度为504px
+				})
 			}
+		</script>
+		<script type="text/javascript">
+		$(function(){
+			$("#start").rotate({
+				bind:{
+					click:function(){
+						var a = Math.floor(Math.random() * 360);
+						 $(this).rotate({
+								duration:3000,
+								angle: 0, 
+								animateTo:1440+a,
+								easing: $.easing.easeOutSine,
+								callback: function(){
+									alert('中奖了I！');
+								}
+						 });
+					}
+				}
+			});
 		});
-	});
-	</script>
+		</script>
+	</section>
 </body>
 </html>
