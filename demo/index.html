@@ -18,11 +18,12 @@
 		<h2>留学房租<span>留学机票</span></h2>
 		<h3>您还有 <span> 3 </span> 次抽奖机会</h3>
 	</header>
-	<section class="">
+	<section class="main">
 		<div class="demo">
         	<div id="disk"></div>
-        	<div id="start"><img src="images/start.png" id="startbtn"></div>
+        	<div id="start"><img src="images/start.png"></div>
    		</div>
+   		<div class="piece"></div>
 	</section>
 	<footer></footer>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
@@ -35,7 +36,7 @@
 				selectors : '.nzfl',     //模块选择器，使用querySelectorAll的方法
 				mode : 'contain',     // auto || contain || cover ，默认模式为auto 
 				width : '750',      //输入页面的宽度，只支持输入数值，默认宽度为320px
-				height : '1254'      //输入页面的高度，只支持输入数值，默认高度为504px
+				height : '1200'      //输入页面的高度，只支持输入数值，默认高度为504px
 			})
 		}
 	</script>
@@ -59,11 +60,5 @@
 		});
 	});
 	</script>
-<style type="text/css">
-.demo{width:666px; height:686px; position:relative; margin:50px auto;}
-#disk{width:666px; height:686px; background:url(images/disk.png) no-repeat;background-size: contain;}
-#start{width:210px; height:210px; position:absolute; top:230px; left:230px;}
-#start img{cursor:pointer;width:210px; height:252px;margin-top: -42px;}
-</style>	
 </body>
 </html>

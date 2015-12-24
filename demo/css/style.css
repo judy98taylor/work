@@ -60,12 +60,16 @@ a img {
 .clearfix {
   zoom: 1; }
 
+html {
+  width: 100%;
+  height: 100%; }
+
 .nzfl {
   position: relative;
   background-color: #F2E6D6;
   padding-top: 56px;
   text-align: center;
-  max-width: 1000px; }
+  margin-top: 0px; }
   .nzfl header h1 {
     font-size: 80px;
     color: #e23a3f; }
@@ -86,6 +90,38 @@ a img {
     font-weight: normal; }
     .nzfl header h3 span {
       color: #fff; }
+  .nzfl .main {
+    position: relative; }
+    .nzfl .main .demo {
+      width: 666px;
+      height: 686px;
+      position: relative;
+      margin: 50px auto; }
+      .nzfl .main .demo #disk {
+        width: 666px;
+        height: 686px;
+        background: url("../images/disk.png") no-repeat;
+        background-size: contain; }
+      .nzfl .main .demo #start {
+        width: 210px;
+        height: 210px;
+        position: absolute;
+        top: 230px;
+        left: 230px; }
+        .nzfl .main .demo #start img {
+          cursor: pointer;
+          width: 210px;
+          height: 252px;
+          margin-top: -42px; }
+    .nzfl .main .piece {
+      position: absolute;
+      top: -220px;
+      left: 30px;
+      z-index: -1;
+      width: 696px;
+      height: 832px;
+      background: url("../images/piece.png") no-repeat;
+      background-size: contain; }
   .nzfl footer {
     position: fixed;
     left: 0;
