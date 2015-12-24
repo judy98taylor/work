@@ -1,27 +1,43 @@
-.demo0{
-	h1{
-		color: red;
-	}
-	form{
-		
-	}
-}
-
-section{
-	border: 1px solid red;
-	margin: 20px;
-	padding: 10px;
-	background-color: #ddd;
-	div{
-		background-color: #fff;
-		border: 1px dashed blue;
-		margin-bottom: 10px;
-		&:last-child{
-			margin: 0;
-		}
+.nzfl{
+	position: relative;
+	background-color: #F2E6D6;
+	padding-top: 56px;
+	text-align: center;
+	header{
 		h1{
-			color: aqua;
-			line-height: 2;
+			font-size: 80px;
+			color: #e23a3f;
 		}
+		h2{
+			margin: 20px 0 24px;
+			font-size: 48px;
+			font-weight: normal;
+			color: #e23a3f;
+			span{
+				background: url("../images/plane.png") no-repeat 20px 16px;
+				padding-left: 88px;
+			}
+			
+		}
+		h3{
+			height: 80px;
+			background: url("../images/banner.png") no-repeat center 0;
+			color: #fbc40f;
+			font-size: 40px;
+			line-height: 80px;
+			font-weight: normal;
+			span{
+				color: #fff;
+			}
+		}
+	}
+	footer{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		background: url("../images/footer.png") no-repeat;
+		background-size: contain;
+		width: 100%;
+		height: 200px;
 	}
 }
